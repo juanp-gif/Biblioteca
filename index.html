@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Biblioteca Personal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>📚 Mi Biblioteca Personal</h1>
+        
+        <!-- Formulario para agregar libros -->
+        <form id="form-libro">
+            <input type="text" id="titulo" placeholder="Título" required>
+            <input type="text" id="autor" placeholder="Autor" required>
+            <select id="genero">
+                <option value="fantasia">Fantasía</option>
+                <option value="ciencia-ficcion">Ciencia Ficción</option>
+                <option value="manga">Manga</option>
+                <option value="Crimen">Crimen</option>
+                <option value="Realismo Magico">Realismo Magico</option>
+                <!-- más géneros -->
+            </select>
+            <button type="submit">Agregar Libro</button>
+        </form>
+
+        <!-- Filtros (listos para futuras funciones) -->
+        <div id="filtros">
+            <button data-filtro="todos">Todos</button>
+            <!-- <button data-filtro="leidos">Leídos</button>
+            <button data-filtro="no-leidos">No Leídos</button> -->
+        </div>
+
+        <!-- Contenedor para las cartas de libros -->
+        <div id="lista-libros"></div>
+        <!-- <div id="estadisticas"></div> -->
+    </div>
+
+    <!-- Scripts separados, cargados en orden correcto -->
+    <script src="js/libro.js" defer></script>
+    <script src="js/crearCartaLibro.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
