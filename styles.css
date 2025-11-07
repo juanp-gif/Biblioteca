@@ -1,0 +1,128 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ===== Contenedor principal ===== */
+#app {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Título ===== */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* ===== Formulario ===== */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+form input, form select {
+    flex: 1 1 150px;
+}
+
+form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* ===== Contenedor de libros ===== */
+#lista-libros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* ===== Cartas de libros ===== */
+.libro {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #ffecec; /* color por defecto */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.libro:hover {
+    transform: translateY(-3px);
+}
+
+/* Cambiar color según estado */
+.libro .estado {
+    font-weight: bold;
+}
+
+.libro .btn-leer {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.libro .btn-eliminar {
+    margin-top: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.libro .btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+.libro .btn-leer.leido {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.libro .btn-leer.no-leido {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+}
